@@ -1,34 +1,25 @@
-# 人脸识别签到小程序
-## 进度
-- **2019/5/25**  
-  实现了学生上传或者拍摄图片到云存储，并结合腾讯云人脸识别完成了人脸信息检测与分析，展示了上传照片的魅力值
-- **2019/5/26**  
-  - 实现了管理员创建人员库的操作
-  - 实现了验证创建的人员库名称和id是否存在的功能
-- **2019/5/27**  
-  修复学生登录功能
-- **2019/5/28**  
-  实现学生登陆后上传相片至人员库
-- **2019/5/30**  
-  解决无法上传学号和姓名的问题
-- **2019/6/2**  
-  实现教师扫描学生检测其是否存在在该人员库的功能
-- **2019/6/3**  
-  修复学生重复上传人脸的问题
-- **2019/6/7**  
-  完成
-## 遇到并解决的问题
-- **2019/5/25**  
-  在控制台删除云函数后，在本地修改后再次上传若失败可以在云函数根目录右键并选择同步云函数列表
-- **2019/5/28**  
-  - 本地云函数修改并保存后记得要上传至云
-  - 获取创建人员接口的参数时报很多奇怪的错，发现是修改了const
-  - 调用`wx.chooseImage()`后，`object.success`回调函数的参数`res`中的`attribute tempFilePaths`不是image或url
-  - 用云文件ID换取真实链接的API是在服务端调用的，而非小程序端
-- **2019.5.29**
-  - 云函数中不需要`wx.`
-  - app.js里的变量云函数怎么可能能访问
-  - 云函数里常见的两个数字错误码不能提供任何帮助，应该检查依次各个变量是否使用错误
-- **2019.5.30**  
-  reset或checkout后要记得把与之前在云上的函数不同的函数再上传一次
+# Face Recognition Sign In Wechat Miniprogram
 
+This project is written without systematic learning of HTML5, CSS3, JavaScript and ES6, causing the project structure and code style confusing. Please be careful.
+
+## Progress
+
+| Date      | Progress                                                                                                                                                  |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2019/5/25 | Students can upload photos to the cloud server, then get the charm value combined with face information detection and analysis provided by Tencent cloud. |
+| 2019/5/26 | Admin can create student table and check if a table exists according to table's name or id.                                                               |
+| 2019/5/27 | Students can login.                                                                                                                                       |
+| 2019/5/28 | Students can upload image to the table.                                                                                                                   |
+| 2019/5/30 | Solving the problem of unable to upload student id and name.                                                                                              |
+| 2019/6/2  | Detect if a student is in the student table based on his or her face.                                                                                     |
+| 2019/6/3  | Fix the bug that students can upload multiple faces.                                                                                                      |
+| 2019/6/7  | All down.                                                                                                                                                 |
+
+## Problems encountered and solved
+
+| Date      | Problems                                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 2019/5/25 | After deleting cloud function at the cloud function console, you need to sync the cloud function if you modify it then.         |
+| 2019/5/28 | After call `wx.chooseImage()`, attribute `tempFilePath` of `res` in call back fucntion `object.success()`'s is not image or url |
+| 2019.5.29 | Cloud functions don't need prefix `wx.` Cloud functions don't have access yto variable inside app.js                            |
+| 2019.5.30 | After reset or checkout, remember to upload cloud functions being affected.                                                     |
