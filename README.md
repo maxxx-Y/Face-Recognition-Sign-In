@@ -15,7 +15,7 @@ This project is written without systematic learning of HTML5, CSS3, JavaScript a
 | 2019/6/3  | Fix the bug that students can upload multiple faces.                                                                                                      |
 | 2019/6/7  | All down.                                                                                                                                                 |
 
-## Problems encountered and solved
+## Problems Encountered and Solved
 
 | Date      | Problems                                                                                                                        |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------- |
